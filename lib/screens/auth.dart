@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat_app/screens/chat.dart';
 import 'package:flutter_chat_app/services/auth_service.dart';
+import 'package:flutter_chat_app/widgets/user_image_picker.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -15,7 +17,7 @@ class _AuthScreenState extends State<AuthScreen> {
   var _enteredEmail = '';
   var _enteredPassword = '';
 
-  void _submit() {
+  void _submit() async {
     final isValid = _form.currentState!.validate();
 
     if (!isValid) {
@@ -25,7 +27,20 @@ class _AuthScreenState extends State<AuthScreen> {
 
     if (_isLogin) {
       AuthService authService = AuthService();
-      authService.loginUser(_enteredEmail, _enteredPassword);
+      var token = await authService.loginUser(_enteredEmail, _enteredPassword);
+
+      if (token.isNotEmpty) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => const ChatScreen(),
+          ),
+        );
+      }
+      // else {
+      //   ScaffoldMessenger.of(context).showSnackBar(
+      //     const SnackBar(content: Text("Please login first!")),
+      //   );
+      // }
     }
   }
 
@@ -58,6 +73,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          if (!_isLogin) const UserImagePicker(),
                           TextFormField(
                             decoration: const InputDecoration(
                               labelText: 'Email address',
