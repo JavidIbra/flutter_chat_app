@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "125292045998",
+    "firebase_url": "https://fireworks-a1b65-default-rtdb.firebaseio.com",
+    "project_id": "fireworks-a1b65",
+    "storage_bucket": "fireworks-a1b65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125292045998:android:06b948009715874dd32f3f",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZdgaEtqvHrQXgQZ063gpz8u5VOYkho9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125292045998:android:8d46156f8c44151ed32f3f",
+        "android_client_info": {
+          "package_name": "com.example.flutter_chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZdgaEtqvHrQXgQZ063gpz8u5VOYkho9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125292045998:android:f09a366bb57ab8f0d32f3f",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firework"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZdgaEtqvHrQXgQZ063gpz8u5VOYkho9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

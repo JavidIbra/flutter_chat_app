@@ -5,7 +5,14 @@ import 'package:flutter_chat_app/screens/auth.dart';
 import 'package:flutter_chat_app/screens/chat.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const App());
 }
 
