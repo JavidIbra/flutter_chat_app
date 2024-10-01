@@ -58,7 +58,7 @@ class _NewMessagesState extends State<NewMessages> {
               textCapitalization: TextCapitalization.sentences,
               autocorrect: true,
               enableSuggestions: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Send a message',
               ),
             ),
@@ -66,7 +66,7 @@ class _NewMessagesState extends State<NewMessages> {
           IconButton(
               color: Theme.of(context).colorScheme.primary,
               onPressed: _submitMessagge,
-              icon: Icon(
+              icon: const Icon(
                 Icons.send,
               ))
         ],
